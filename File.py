@@ -512,7 +512,7 @@ def n_s():
         print 47 * '-'
         print '\x1b[1;93mFor example:123,1234,12345,786,12,1122\x1b[1;91m'
         print 47 * '-'
-        print(")
+       
     
     
      def main(arg):
